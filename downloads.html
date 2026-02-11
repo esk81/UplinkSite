@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Soporte Remoto - Uplink Informática</title>
+    <style>
+        body {
+            background-color: black;
+            color: #00ff00;
+            font-family: "Courier New", Courier, monospace;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding-top: 50px;
+            text-align: center;
+        }
+        .hidden {
+            visibility: hidden;
+        }
+        a {
+            color: #00ff00;
+            text-decoration: none;
+            display: block;
+            margin: 10px 0;
+        }
+        a:hover {
+            text-decoration: underline;
+		}
+		.separador {
+			border: 0;
+			height: 1px;
+			background: #00ff00;
+			margin: 20px 0;
+		}
+        .cursor {
+            display: inline-block;
+            width: 10px;
+            height: 24px;
+            background-color: #00ff00;
+            animation: blink 1s step-end infinite;
+		}
+        @keyframes blink {
+            from, to { background-color: transparent; }
+            50% { background-color: #00ff00; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 id="title"></h1>
+        <div id="content" class="hidden">
+			<hr class="separador">
+            <a href="https://mc.uplink.com.ar/meshagents?id=4&meshid=NOhzCdU2oKswG6fxusNjYr7K4dWt4@VfpydMK@d0$UsxfSJTeT52v$e90aMomnVT&installflags=2">Descargar Windows x64 (Windows 10 o superior)</a>
+            <a href="https://mc.uplink.com.ar/meshagents?id=3&meshid=NOhzCdU2oKswG6fxusNjYr7K4dWt4@VfpydMK@d0$UsxfSJTeT52v$e90aMomnVT&installflags=2">Descargar Windows x32 (Windows 7 o inferior)</a>
+			<hr class="separador">
+            <div class="instructions">
+                <p>Instrucciones de uso:</p>
+				<p>- Descargar la versión correspondiente a su sistema. Si tiene alguna duda consulte a soporte técnico.<br>
+				- Una vez descargado el archivo, ejecutar con doble-click para iniciar la instalación.<br>
+				-Dependiendo de las configuraciones de cada sistema (versión de Windows, tipo de antivirus) pueden aparecer distintos problemas durante la instalación. Dado el caso, contactar con soporte para recibir asistencia.</p>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const titleText = "Soporte Remoto - Uplink Informática";
+            const titleElement = document.getElementById("title");
+            const cursorElement = document.querySelector(".cursor");
+            const contentElement = document.getElementById("content");
+            let index = 0;
+
+            function typeWriter() {
+                if (index < titleText.length) {
+                    titleElement.innerHTML = titleText.slice(0, index + 1) + '<span class="cursor"></span>';
+                    index++;
+                    setTimeout(typeWriter, 50);
+                } else {
+                    titleElement.innerHTML = titleText + '<span class="cursor"></span>';
+                    contentElement.style.visibility = "visible";
+                }
+            }
+
+            typeWriter();
+        });
+    </script>
+</body>
+</html>
