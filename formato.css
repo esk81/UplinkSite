@@ -82,7 +82,7 @@ nav {
 .hero {
 	text-align: center;
 	padding: 80px 0 100px;
-	background: linear-gradient(to bottom, white, var(--bg-alt));
+	background: linear-gradient(to bottom, var(--primary), white);
 }
 
 .hero h1 {
