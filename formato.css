@@ -310,6 +310,16 @@ nav {
 	font-size: 1.1rem;
 }
 
+.contact-detail a {
+    display: flex;
+    text-decoration: none;
+    color: inherit; /* Mantiene los colores que ya definiste */
+}
+
+.contact-detail a:hover {
+    opacity: 0.8; /* Da un feedback visual al pasar el mouse */
+}
+
 .contact-icon {
 	font-size: 1.8rem;
 	min-width: 48px;
@@ -435,4 +445,5 @@ footer {
 	.downloads .btn-wrapper .btn {
 		min-width: 140px;
 	}
+
 }
